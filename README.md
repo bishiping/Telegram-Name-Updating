@@ -28,7 +28,7 @@ lastname实时更新效果：[旧梦](https://t.me/JiuMeng "点击访问")
 ## 2. 安装telethon
 
     # 安装依赖
-    pip3 install -r requirements
+    pip3 install -r requirements.txt
 
 ## 3. 运行Demo小程序
     
