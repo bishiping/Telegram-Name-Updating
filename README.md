@@ -2,15 +2,20 @@
 
 Update (first/last/user) name of Telegram user every 30 seconds. 
 
-参考文档：<a href="https://telethon.readthedocs.io/en/stable/">Telethon</a>
+参考文档：
+- [Telethon](https://telethon.readthedocs.io/en/stable/ "点击访问")
+- [Telegram名字随时间而变化/实时显示时间-MOE](https://www.moe.am/87.html "点击访问")
 
-lastname实时更新效果：<a href="https://t.me/JiuMeng">旧梦</a>
+lastname实时更新效果：[旧梦](https://t.me/JiuMeng "点击访问")
 
 ## 0. 准备
 
 运行环境：VPS，python3，python3-pip
-
-创建应用：<a href="https://my.telegram.org/">https://my.telegram.org/</a>。只要填`App title`和`Short name`即可。获得`api_id`和`api_hash`。
+    
+    # 如果是Debian 10，执行下面命令安装pip
+    sudo apt update &&  sudo apt install -y git python3-pip
+    
+创建应用：[https://my.telegram.org/](https://my.telegram.org/ "点击访问") 。只要填`App title`和`Short name`即可。获得`api_id`和`api_hash`。
 
 ## 1. 下载Demo小程序到VPS上
     
