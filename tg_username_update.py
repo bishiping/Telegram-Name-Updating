@@ -4,6 +4,7 @@
 # Updated:
 #  1. 使用async来update lastname，更加稳定
 #  2. 增加emoji clock，让时间显示更加有趣味
+#  3. 修改use_aliases=True为language='alias'来消除warn提醒
 
 import time
 import os
@@ -17,14 +18,16 @@ from telethon.tl.functions.account import UpdateProfileRequest
 from emoji import emojize
 
 
-dizzy = emojize(":dizzy:", use_aliases=True)
-cake = emojize(":cake:", use_aliases=True)
+dizzy = emojize(":dizzy:", language='alias')
+cake = emojize(":cake:", language='alias')
 all_time_emoji_name = ["clock12", "clock1230", "clock1", "clock130", "clock2", "clock230", "clock3", "clock330", "clock4", "clock430", "clock5", "clock530", "clock6", "clock630", "clock7", "clock730", "clock8", "clock830", "clock9", "clock930", "clock10", "clock1030", "clock11", "clock1130"]
-time_emoji_symb = [emojize(":%s:" %s, use_aliases=True) for s in all_time_emoji_name]
+time_emoji_symb = [emojize(":%s:" %s, language='alias') for s in all_time_emoji_name]
 
 api_auth_file = 'api_auth'
 if not os.path.exists(api_auth_file+'.session'):
+    print("请输入你的api_id：")
     api_id = input('api_id: ')
+    print("请输入你的api_hash：")
     api_hash = input('api_hash: ')
 else:
     api_id = 123456
